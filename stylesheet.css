@@ -1,0 +1,76 @@
+div {
+  display: block;
+}
+
+.month-body {
+  min-height: 300px;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.row {
+  height: 20%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.row1 {
+  top: 0;
+}
+
+.row2 {
+  top: 20%;
+}
+
+.row3 {
+  top: 40%;
+}
+
+.row4 {
+  top: 60%;
+}
+
+.row5 {
+  top: 80%;
+}
+
+.day {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(216, 217, 217);
+  width: 14.285714285714286%;
+  position: absolute;
+  right: auto;
+}
+
+.col1 {
+  left: 0%;
+}
+
+.col2 {
+  left: 14.285714285714286%;
+}
+
+.col3 {
+  left: 28.571428571428572%;
+}
+
+.col4 {
+  left: 42.857142857142858%;
+}
+
+.col5 {
+  left: 57.142857142857144%;
+}
+
+.col6 {
+  left: 71.42857142857143%;
+}
+
+.col7 {
+  left: 85.714285714285716%;
+}

@@ -19,9 +19,11 @@ var getGridCell = document.querySelectorAll("[role]");
 var i = 0;
 var day = firstDay;
 var maximumDay = getMaximumDay();
+var gridCellClass;
 while (i < getGridCell.length) {
   if (day == todaysDate.getDate()) {
-    getGridCell[i].setAttribute("class", "col col3 today");
+    gridCellClass = getGridCell[i].className
+    getGridCell[i].setAttribute("class", gridCellClass + " today");
   }
   getGridCell[i].setAttribute("d", day);
   i = i + 1

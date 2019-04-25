@@ -1,3 +1,12 @@
+.sc-view {
+  cursor: default;
+  overflow: hidden;
+  position: absolute;
+  margin: 0px;
+  border: solid 0 transparent;
+  user-select: none;
+}
+
 body {
   overflow: hidden;
   background: white;
@@ -15,13 +24,8 @@ body {
   cursor: auto;
 }
 
-.sc-view {
-  cursor: default;
-  overflow: hidden;
-  position: absolute;
-  margin: 0px;
-  border: solid 0 transparent;
-  user-select: none;
+.sc1972 {
+  cursor: auto;
 }
 
 .app-view {
@@ -85,16 +89,11 @@ body {
 /* ------------------------ Header ---------------------------- */
 
 .main-header {
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  height: 44px;
+  background-image: linear-gradient(#fdfdfd, #f9f9f9);
 }
 
 .display-header {
   left: 50%;
-  top: 4px;
-  width: 197.875px;
   height: 36px;
   overflow: hidden;
   margin-left: calc(-197.875px  / 2);

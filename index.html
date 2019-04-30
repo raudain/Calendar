@@ -2,243 +2,267 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/png" href="Images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <title>iCloud Calendar</title>
     <link rel="stylesheet" href="stylesheet.css">
   </head>
-  <body>
-    <div class="sc-view app-view">
-      <div class="sc-view main-content">
-        <div class="atv4 sc1972 sc-view main-header" style="left: 0px; right: 0px; top: 0px; height: 44px; ">
-          <div class="sc-view navigation-control display-header" style="top: 4px; width: 200px; height: 36px;">
-            <div id="sc2118" class="atv4 sc-view sc-label-view navigation-control-date large-display-text label sc-huge-size"></div>
-            <div class="sc-view arrow previous-arrow" onClick = "goToPreviousMonth()">
-              <div class="arrow-image"></div>
+  <body class="webkit"style="overflow: hidden;">
+    <div class="sc-view sc-pane focus" style="left: 0px; right: 0px; top: 0px; bottom: 0px; min-width: 950px; min-height: 550px;">
+      <div class="sc-view app-view" style="left: 0px; right: 0px; top: 0px; bottom: 0px; ">
+        <div class="sc1971 sc-view  sc-layout-horizontal" style="left: 0px; right: 0px; top: 0px; bottom: 0px; ">
+          <div class="sc1971 sc-view main-content" style="left: 0px; top: 0px; bottom: 0px; width: 100%;">
+            <div class="atv4 sc1972 sc-view main-header" style="left: 0px; right: 0px; top: 0px; height: 44px; ">
+              <div class="sc1971 sc-view navigation-control display-header" style="left: 50%; top: 4px; width: 203.188px; height: 36px; margin-left: calc(-197.875px  / 2);">
+                <div id="sc2117" class="atv4 sc1971 sc-view sc-label-view navigation-control-date large-display-text label sc-huge-size" style="left: 1px; right: 0px; top: 0px; bottom: 0px; text-align: center;">
+                  <strong>Oh hi Mark</strong>
+                </div>
+                <div class="sc-view arrow previous-arrow" onClick = "goToPreviousMonth()">
+                  <div class="arrow-image"></div>
+                </div>
+                <div class="sc-view arrow next-arrow" onClick = "goToNextMonth()">
+                  <div class="arrow-image"></div>
+                </div>
+              </div>
             </div>
-            <div class="sc-view arrow next-arrow" onClick = "goToNextMonth()">
-              <div class="arrow-image"></div>
+            <div class="sc-view main-container">
+              <div class="sc1971 sc-view month num-rows5">
+                <div class="headings">
+                  <div class="col col1">
+                    Sun
+                  </div>
+                  <div class="col col2">
+                    Mon
+                  </div>
+                  <div class="col col3">
+                    Tue
+                  </div>
+                  <div class="col col4">
+                    Wed
+                  </div>
+                  <div class="col col5">
+                    Thu
+                  </div>
+                  <div class="col col6">
+                    Fri
+                  </div>
+                  <div class="col col7">
+                    Sat
+                  </div>
+                </div>
+                <div class="month-body">
+                  <div class="row row1">
+                    <div role="gridcell" class="col col1 weekend off-month">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col2">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col3">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col4">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col5">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col6">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col7 weekend">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row2">
+                    <div role="gridcell" class="col col1 weekend">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col2">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col3">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col4">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col5">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col6">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col7 weekend">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row3">
+                    <div role="gridcell" class="col col1 weekend">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col2">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col3">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col4">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col5">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col6">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col7 weekend">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row4">
+                    <div role="gridcell" class="col col1 weekend">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col2">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col3">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col4">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col5">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col6">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col7 weekend">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row5">
+                    <div role="gridcell" class="col col1 weekend">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col2">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col3">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col4 off-month">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col5 off-month">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col6 off-month">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                    <div role="gridcell" class="col col7 weekend off-month">
+                      <div class="cell-container">
+                        <div class="dt"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sc1971 sc-view main-footer" style="left: 0px; right: 0px; bottom: 0px; height: 44px; ">
+              <div class="sc1971 sc-view last-section sc-static-layout" style="flex-basis: 122.719px;">
+                <div title="New Event" class="atv4 borderless sc1971 sc-view sc-button-view sc-static-layout button sc-regular-size">
+                  <label class="sc-button-label sc-regular-size icon">
+                    <img src="images/add_event.png" class="icon add-event-icon">
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="sc-view main-container">
-          <div class="sc1971 sc-view month num-rows5">
-            <div class="headings">
-              <div class="col col1">
-                Sun
-              </div>
-              <div class="col col2">
-                Mon
-              </div>
-              <div class="col col3">
-                Tue
-              </div>
-              <div class="col col4">
-                Wed
-              </div>
-              <div class="col col5">
-                Thu
-              </div>
-              <div class="col col6">
-                Fri
-              </div>
-              <div class="col col7">
-                Sat
-              </div>
-            </div>
-            <div class="month-body">
-              <div class="row row1">
-                <div role="gridcell" class="col col1 weekend off-month">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col2">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col3">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col4">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col5">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col6">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col7 weekend">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row row2">
-                <div role="gridcell" class="col col1 weekend">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col2">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col3">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col4">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col5">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col6">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col7 weekend">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row row3">
-                <div role="gridcell" class="col col1 weekend">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col2">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col3">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col4">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col5">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col6">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col7 weekend">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row row4">
-                <div role="gridcell" class="col col1 weekend">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div class="this-week-line"></div>
-                <div role="gridcell" class="col col2">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col3">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col4">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col5">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col6">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col7 weekend">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row row5">
-                <div role="gridcell" class="col col1 weekend">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col2">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col3">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col4 off-month">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col5 off-month">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col6 off-month">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-                <div role="gridcell" class="col col7 weekend off-month">
-                  <div class="cell-container">
-                    <div class="dt"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="sc-view app-line top"></div>
+        <div class="sc-view app-line bottom"></div>
+      </div>
+    </div>
+    <div class="atv4 sc-view sc-pane sc-panel sc-picker pop-over" style="left: 1030px; width: 380px; top: 740px; height: 496px; max-height: 612px; transform-origin: 0px 33px;">
+      <div class="sc-pointer perfectTop extra-right" style="margin-top: 0px"></div>
+      <div class="sc-view picker-contentView" style="left: 0px; right: 0px; top: 0px; bottom: 0px; ">
+        <div class="sc-view event-inspector-bottom" style="left: 5px; right: 5px; bottom: 1px; height: 43px; ">
+          <div class="sc-view text-align-left" style="left: 12px; width: 120px; bottom: 4px; height: 26px; ">
+
           </div>
         </div>
       </div>
-      <div class="sc-view app-line top"></div>
-      <div class="sc-view app-line bottom"></div>
     </div>
-    <script src="main.js"></script>
   </body>
+  <script src="main.js"></script>
 </html>

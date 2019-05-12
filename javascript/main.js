@@ -74,3 +74,32 @@ function goToNextMonth() {
   }
   getMonth.innerHTML = "<strong>" + monthText[month] + "</strong> 2019";
 }
+
+var getEventTitle = document.getElementsByTagName("input");
+getEventTitle[0].defaultValue = "New Event";
+
+function toggleCheckMark(element) {
+  var classes = element.className;
+  var unChecked = "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size";
+  var checked = "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size sel";
+  if (classes === unChecked) {
+    element.className = checked;
+  } else {
+    element.className = unChecked;
+  }
+}
+
+var getCheckBox = document.getElementsByTagName("span");
+var parent = getCheckBox[0].parentElement;
+getCheckBox[0].addEventListener("click", function() {
+  toggleCheckMark(parent);
+});
+
+function cancelEvent() {
+  var eventForm = document.getElementById("sc3841");
+  eventForm.parentNode.removeChild(eventForm);
+}
+
+document.getElementById("sc4852-label").addEventListener("click", cancelEvent);
+
+cancelEvent();

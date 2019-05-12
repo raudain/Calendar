@@ -1,3 +1,15 @@
+html[Attributes Style] {
+    -webkit-locale: "en-us";
+}
+
+html {
+    -ms-content-zooming: none;
+}
+
+html {
+    touch-action: none;
+}
+
 body {
   position: absolute;
   margin: 0px;
@@ -8,6 +20,10 @@ body {
   font-family: sans-serif;
   font-size: 12px;
   line-height: 1.4;
+}
+
+.sc-hidden {
+    display: none !important;
 }
 
 .sc-view {
@@ -37,11 +53,12 @@ body {
 body {
   margin: 0px;
   padding: 0px;
+  -webkit-font-smoothing: antialiased;
   font-family: 'SFNSText', 'Helvetica Neue', sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 1.2;
-
+  -ms-content-zooming: none;
   text-rendering: optimizeLegibility;
 }
 
@@ -103,6 +120,11 @@ body {
   bottom: 44px;
   height: 0px;
 }
+
+.sc-label-view.sc-regular-size {
+    font-size: 12px;
+}
+
 
 /* ------------------------ Header ---------------------------- */
 
@@ -170,7 +192,7 @@ strong {
 
 .arrow-image {
   background-size: 168px 911px;
-  background-image: url(images/packed-5@2x.png);
+  background-image: url(images/background.png);
   background-repeat: no-no-repeat;
   width: 10px;
   top: 10px;
@@ -363,6 +385,9 @@ div.col.today .cell-container {
   background-color: #f7f7f7;
 }
 
+
+/* ---------------------------- Footer -------------------------*/
+
 .main-footer {
   display: -webkit-box;
   display: -moz-box;
@@ -409,26 +434,40 @@ div.col.today .cell-container {
     -moz-box-sizing: border-box;
 }
 
+.atv4.sc-checkbox-view {
+    color: #1a1a1a;
+    margin-right: 4px;
+    margin-left: 4px;
+    vertical-align: middle;
+    text-align: left;
+}
+
 .atv4.sc-regular-size {
     font-size: 13px;
 }
 
-.sc-button-view.button {
+.borderless.sc-button-view.button {
   margin: 0px;
   cursor: pointer;
 }
 
-.borderless.button {
+.sc-regular-size.borderless.button {
     height: 44px;
 }
 
-.button.sc-button-view {
-    margin-left: 6px;
-    margin-right: 6px;
+
+/*  ----------------------- Footer Button Label ---------------------- */
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
 }
 
 
-/*  ----------------------- Button Label ---------------------------*/
+/* ------------------------------New Event Button --------------- */
 
 .sc-button-label {
     vertical-align: top;
@@ -458,7 +497,7 @@ div.col.today .cell-container {
   line-height: 26px;
 }
 
-.sc-button-view.button .sc-button-label {
+.borderless.sc-button-view.button .sc-button-label {
   cursor: inherit;
   top: 50%;
   color: #167efb;
@@ -466,18 +505,23 @@ div.col.today .cell-container {
   padding: 0px 0px 0px 0px;
 }
 
-.borderless.button .sc-button-label {
+.sc-regular-size.borderless.button .sc-button-label {
   font-size: 17px;
   line-height: 24px;
   margin-top: -12px;
   padding: 0px 0px 0px 0px;
 }
 
-.button.borderless .sc-button-label {
+.sc-button-view.button.sel .sc-button-label,
+.button.def .sc-button-label {
+  font-weight: 500;
+}
+
+.main-footer .calendar.button.borderless .sc-button-label {
     color: #ff3b30;
 }
 
-.webkit .button .sc-button-label {
+.webkit .sc-regular-size.borderless.button .sc-button-label {
     line-height: 25px;
 }
 
@@ -498,14 +542,14 @@ div.col.today .cell-container {
 
 .button .add-event-icon {
     background-size: 168px 911px;
-    background-image: url(images/packed-5@2x.png);
-    background-position: -130px -503px;
+    background-image: url(images/background.png);
+    background-position: -78px -503px;
     background-repeat: no-repeat;
 }
 
 .button .add-event-icon:hover {
     background-size: 168px 911px;
-    background-image: url(images/packed-5@2x.png);
+    background-image: url(images/background.png);
     background-position: -52px -503px;
     background-repeat: no-repeat;
 }
@@ -525,11 +569,20 @@ div.col.today .cell-container {
     height: 26px;
 }
 
-.sc-picker.sc-panel:before {
-    top: -9px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+.atv4.sc-pane.sc-picker.sc-panel.perfectBottom:after, .atv4.sc-pane.sc-picker.sc-panel.perfectTop:after, .atv4.sc-pane.sc-picker.sc-panel.perfectRight:after, .atv4.sc-pane.sc-picker.sc-panel.perfectLeft:after {
+    border: 1px solid #d6d6d6;
+    border: 1px solid rgba(0,0,0,0.1);
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: 4px;
+    right: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    content: '';
 }
+
 .atv4.sc-pane.sc-panel:before {
     position: absolute;
     top: -5px;
@@ -546,8 +599,13 @@ div.col.today .cell-container {
     box-shadow: 0px 0px 15px rgba(0,0,0,0.15), 0px 0px 1px 1px rgba(0,0,0,0.1);
 }
 
+.sc-pane.sc-picker.sc-panel:before {
+    top: -9px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
 
-/*------------------------- Pointer ---------------------------*/
+/*---------------------- New Event Bottom Pointer ---------------------*/
 
 .sc-picker .perfectTop {
     position: absolute;
@@ -560,7 +618,7 @@ div.col.today .cell-container {
 
 .sc-picker .sc-pointer {
     background-size: 168px 911px;
-    background-image: url(images/packed-5@2x.png);
+    background-image: url(images/background.png);
     background-position: -134px -690px;
     background-repeat: no-repeat;
     position: absolute;
@@ -575,7 +633,7 @@ div.col.today .cell-container {
     margin-left: -17px;
 }
 
-.perfectTop.extra-right {
+.sc-pointer.perfectTop.extra-right {
     right: 6px;
     left: auto;
     margin-left: 0px;
@@ -598,4 +656,388 @@ div.col.today .cell-container {
 
 .event-inspector-bottom {
     border-top: 1px solid #d9d9d9;
+}
+
+
+/* --------------------------- New Event Right Buttons ------------- */
+
+.text-align-right {
+    text-align: right;
+}
+
+.calendar.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.sc-button-view.button.sc-static-layout {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.calendar.action-button-separator {
+    display: inline-block;
+    width: 1px;
+    background-color: #dad9d4;
+}
+
+.event-inspector-bottom .action-button-separator {
+    height: 20px;
+    right: 11px;
+}
+
+.windows.webkit .atv4.sc-text-field-view.sc-huge-size {
+    line-height: 29px;
+}
+
+.sc-text-field-view {
+    border: none;
+    overflow: visible;
+    background: white;
+}
+
+.atv4.sc-text-field-view {
+    color: #1a1a1a;
+    border: 0px none;
+    vertical-align: top;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.sc-text-field-view.sc-huge-size {
+    font-size: 21px;
+    line-height: 27px;
+}
+
+.calendar.inspector-title {
+    font-size: 21px;
+    color: #2B2B2B;
+}
+
+.sc-huge-size.text-field {
+    min-height: 31px;
+    max-height: 31px;
+}
+
+.sc-text-field-view.sc-huge-size {
+    line-height: 29px;
+}
+
+.sc-text-field-view .border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.webkit .sc-text-field-view .border {
+    -webkit-appearance: textfield;
+}
+
+.atv4.sc-text-field-view .border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border: 1px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-style: solid;
+    border-color: #d9d9d9;
+    border-radius: 2px;
+    -webkit-appearance: none !important;
+    -webkit-transition-property: box-shadow, border;
+    -moz-transition-property: box-shadow, border;
+    transition-property: box-shadow, border;
+    -webkit-transition-duration: 0.35s;
+    -moz-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    box-shadow: inset 0px 1px 0px 0px #fafafa;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #fafafa;
+    outline: none;
+}
+
+.sc-text-field-view .padding {
+    top: 0px;
+    left: 3px;
+    bottom: 0px;
+    right: 3px;
+    position: absolute;
+}
+
+.atv4.sc-text-field-view .padding {
+    left: 7px;
+    right: 8px;
+    top: 2px;
+    bottom: 2px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+    line-height: inherit;
+}
+
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    -webkit-font-smoothing: inherit;
+}
+
+body textarea, body input {
+    font-family: 'SFNSText', 'Helvetica Neue', sans-serif;
+}
+
+.sc-text-field-view input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+    background: transparent;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.sc-text-field-view input {
+    color: #1a1a1a;
+}
+
+.padding .field {
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    vertical-align: middle;
+    line-height: inherit;
+}
+
+.atv4.square.button {
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px #fafafa;
+    background-color: #fafafa;
+}
+
+.sc-regular-size.square.button {
+    height: 26px;
+    max-height: 26px;
+    min-height: 26px;
+    min-width: 68px;
+}
+
+.sc-select-view.calendar-selector-popup.color-menu-editable-inspector {
+    min-width: 30px;
+    max-height: 31px;
+}
+
+.square.button .sc-button-label {
+    color: #167efb;
+}
+
+.square.button .sc-button-label {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.calendar-popup.sc-select-view .sc-button-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.square.button .sc-button-label {
+    line-height: 25px;
+}
+
+.sc-select-view .selected-color {
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.color-menu-editable-inspector .selected-color {
+    top: 10px;
+}
+
+.swatch-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.sc-text-field-view.sc-regular-size {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.sc-text-field-view.sc-regular-size.text-field {
+    min-height: 26px;
+    max-height: 26px;
+}
+
+.hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #b3b3b3;
+    line-height: inherit;
+}
+
+.sc-label-view.sc-regular-size {
+    line-height: 17px;
+}
+
+.atv4.calendar.sc-view.sc-label-view.inspector-label.text-wrapping, .atv4.calendar.inspector-label {
+    font-weight: 500;
+    color: #bbbbbb;
+}
+
+.sc-checkbox-view.sc-regular-size {
+    line-height: 17px;
+}
+
+.sc-checkbox-view.sel .button {
+    background-size: 168px 911px;
+    background-image: url(images/background.png);
+    background-position: -144px -610px;
+    background-repeat: no-repeat;
+}
+
+.sc-checkbox-view .button {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    background-size: 168px 911px;
+    background-image: url(images/background.png);
+    background-position: 0px -626px;
+    background-repeat: no-repeat;
+}
+
+.atv4.sc-checkbox-view .label {
+    display: inline-block;
+    padding-left: 20px;
+    color: #1a1a1a;
+}
+
+.event-time-fields {
+    overflow: visible;
+}
+
+.atv4.dropdown.button {
+    cursor: default;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px #fafafa;
+    background-color: #fafafa;
+}
+
+.event-inspector-panel .scroll .time-meridian {
+    float: left;
+    position: relative;
+    margin-right: 4px;
+}
+
+.event-inspector-panel .scroll .select-field-margin {
+    margin-left: 0;
+}
+
+.sc-regular-size.dropdown.button {
+    min-width: 68px;
+    height: 26px;
+    max-height: 26px;
+    min-height: 26px;
+    padding-right: 22px;
+}
+
+.dropdown.button .sc-button-label {
+    cursor: default;
+    color: #363636;
+    padding: 0px 0px 0px 1px;
+    text-align: left;
+    min-height: 0px;
+}
+
+.dropdown.button .sc-button-label {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.dropdown.button .sc-button-label {
+    line-height: 25px;
+}
+
+.atv4.dropdown.button:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 16px;
+    height: 16px;
+    background-size: 168px 911px;
+    background-image: url(images/background.png);
+    background-position: -48px -690px;
+    background-repeat: no-repeat;
+}
+
+.sc-small-size.borderless.button .sc-button-label {
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: -9px;
+    padding: 0px 0px 0px 0px;
+}
+
+.sc-small-size.borderless.button .sc-button-label {
+    line-height: 21px;
+}
+
+.event-inspector-panel .note-field {
+    -webkit-transform: translateZ(0);
+}
+
+.sc-text-field-view textarea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+    background: transparent;
+    vertical-align: middle;
+    resize: none;
+    overflow: auto;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
 }

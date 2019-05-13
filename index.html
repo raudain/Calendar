@@ -7,153 +7,47 @@
     <link rel="stylesheet" href="stylesheet.css">
     <style type="text/css">html { touch-action: none; }</style>
     <style type="text/css">
-      .atv4.calendar.event-inspector-panel .sc-button-view.select-button img.status-accepted-image,.atv4.calendar.event-inspector-panel .sc-button-view.select-button img.status-declined-image,.atv4.calendar.event-inspector-panel .sc-button-view.select-button img.status-tentative-image{
-        margin-top:0
-      }
-      .invitee-list-example label{
-        border:1px solid transparent;
-        border-radius:3px;
-        color:#808080;
-        line-height:23px;
-        white-space:nowrap;
-        max-width:228px;
-        display:inline-block;
-        overflow:hidden;
-        text-overflow:ellipsis;
-        padding-right:18px;
-        position:relative
-      }
-      .invitee-list-example label:hover{
-        background-color:#e5e5e5;
-        border-color:#ccc;
-        color:#666
-      }
-      .invitee-list-example label.sel,.invitee-list-example label.active{
-        background-color:#999;
-        border-color:#999;
-        color:#fff
-      }
-      .invitee-list-example label:before,.invitee-list-example label:after{content:'';display:inline-block}.invitee-list-example label:before{margin-left:5px;margin-right:4px;vertical-align:-1px}.invitee-list-example label:after{position:absolute;top:10px;right:7px}.invitee-list-example .icloud-member label{color:#007aff}.invitee-list-example .validation-error label{color:#FF8080;font-weight:500}.focus .atv4.calendar.time-picker .duration-menu-item a{background:#0076E3}.atv4.calendar.time-picker .duration-menu-item a span.value{position:relative;float:left;margin-left:9px}.atv4.calendar.time-picker .duration-menu-item a span.duration{position:relative;color:#878787;font-size:11px;margin-left:5px}@-webkit-keyframes pop{0%{-webkit-transform:scale3d(0.5, 0.5, 1)}70%{-webkit-transform:scale3d(1.1, 1.1, 1)}100%{-webkit-transform:scale3d(1, 1, 1)}}.scroll-separator{background-color:#d2d2d2}.event-loading-progress{position:absolute;top:0%;bottom:0%;width:100%;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;line-height:14px;margin:0px}.event-loading-spinner{position:relative;bottom:13px}.event-loading-spinner.readOnly{margin-left:46px}.event-loading-spinner.readWrite{margin-left:50px}.event-loading-text{padding-top:8px;margin-left:9px;text-align:center;float:left}.loading-spinner.event-inspector{width:100%}.sc-view td.event-inspector{border:0}div.inspector-loading.me-table-loading{padding-top:8px;padding-left:40px;float:left}.event-button-align{text-align:right}.atv4.calendar.sc-button-view.select-button img{height:12px;width:12px;top:0;margin-right:3px}.safari .atv4.calendar.sc-button-view.select-button img,.msie .atv4.calendar.sc-button-view.select-button img{top:-1px}.atv4.calendar.sc-button-view a img{height:12px;width:12px;top:1px;left:23px;margin-right:3px}.msie .atv4.calendar.sc-button-view a img{top:2px}.ei-scroll-overflow{overflow-y:auto}.highlighted-update{background-color:#dfe0e2;-webkit-border-radius:4px;-moz-border-radius:4px}.readonly-url{cursor:pointer;color:blue}.event-inspector-panel .atv4.calendar.popup{min-width:0}.atv4.calendar.sc-button-view.select-button img.status-accepted-image,.atv4.calendar.sc-button-view.select-button img.status-declined-image,.atv4.calendar.sc-button-view.select-button img.status-tentative-image,.atv4.calendar.sc-button-view.select-button img.status-needs-action{left:0;margin:0 3px 3px 0}.event-inspector-panel .sc-button-view.select-button img.status-accepted-image,.event-inspector-panel .sc-button-view.select-button img.status-declined-image,.event-inspector-panel .sc-button-view.select-button img.status-tentative-image,.event-inspector-panel .sc-button-view.select-button img.status-needs-action{margin:0 5px 3px -1px}.ie7 .event-inspector-panel .sc-button-view.select-button img.status-accepted-image,.ie7 .event-inspector-panel .sc-button-view.select-button img.status-declined-image,.ie7 .event-inspector-panel .sc-button-view.select-button img.status-tentative-image,.ie7 .event-inspector-panel .sc-button-view.select-button img.status-needs-action{top:2px}.mozilla .event-inspector-panel .picker-contentView .sc-button-view.square .sc-button-label img.status-accepted-image,.mozilla .event-inspector-panel .picker-contentView .sc-button-view.square .sc-button-label img.status-declined-image,.mozilla .event-inspector-panel .picker-contentView .sc-button-view.square .sc-button-label img.status-tentative-image,.mozilla .event-inspector-panel .picker-contentView .sc-button-view.square .sc-button-label img.status-needs-action{margin-top:1px}.ie7 .event-inspector-panel .picker-contentView .sc-button-view.square .sc-button-label img.status-accepted-image,.ie7 .event-inspector-panel .picker-contentView .sc-button-view.square .sc-button-label img.status-declined-image,.ie7 .event-inspector-panel .picker-contentView .sc-button-view.square .sc-button-label img.status-tentative-image,.ie7 .event-inspector-panel .picker-contentView .sc-button-view.square .sc-button-label img.status-needs-action{top:1px}.atv4.calendar.sc-button-view a img.status-accepted-image,.atv4.calendar.sc-button-view a img.status-declined-image,.atv4.calendar.sc-button-view a img.status-tentative-image,.atv4.calendar.sc-button-view a img.status-needs-action{margin-top:2px}.atv4.calendar.menu-label .sc-menu-item .menu-item.has-icon span.value{margin-left:38px}.sc-view.repeatTop,.sc-view.timeZoneView{overflow:visible}div.sc-view label.sc-text-field-view.note-field.text-area span.padding{top:2px;left:5px}.msie .atv4.calendar.sc-regular-size.sc-view.note-field textarea{padding-top:1px}.mozilla .note-field.text-area{padding-bottom:2px}.note-text-wrapping{text-wrap:normal;word-wrap:break-word}.inspector-loading-link{color:#1C4FB3;cursor:pointer}.inspector-loading-link:hover{text-decoration:none}.falloff-scroll.scroll.fall-off-right8 .falloff{position:absolute;left:2px;right:15px;height:15px}.windows.chrome .atv4.calendar.event-inspector-panel .note-field{-webkit-transform:translateZ(0)}.event-inspector-panel .event-scroll .note-view{overflow:visible}.safari .event-inspector-panel .note-view .sc-view.sc-text-field-view.note-field.text-area .field{padding-top:2px}.msie .event-inspector-panel .note-view .sc-view.sc-text-field-view.note-field.text-area .field{padding-top:1px}.msie .event-inspector-panel .sc-button-view.select-button.custom-popup-button .sc-button-label .custom-popup-text{margin-top:0}.msie .event-inspector-panel .add-invitee .field{padding-top:2px}.event-inspector-panel .calendar-drop-down{overflow:visible}.event-inspector-panel .createdBy-field.ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis}.ie7 .event-inspector-panel .select-button.custom-popup-button .sc-button-label .selected-color{top:5px}.atv4.calendar.event-inspector-panel .sc-button-view.select-button img.status-accepted-image,.atv4.calendar.event-inspector-panel .sc-button-view.select-button img.status-declined-image,.atv4.calendar.event-inspector-panel .sc-button-view.select-button img.status-tentative-image{height:10px}.atv4.calendar.event-inspector-panel .sc-scroller-view.me-capless-mini-scroller-view.sc-vertical .cap,.atv4.calendar.event-inspector-panel .sc-scroller-view.me-capless-mini-scroller-view.sc-vertical .endcap,.atv4.calendar.event-inspector-panel .sc-scroller-view.me-capless-mini-scroller-view.sc-vertical .thumb .thumb-top,.atv4.calendar.event-inspector-panel .sc-scroller-view.me-capless-mini-scroller-view.sc-vertical .thumb .thumb-bottom,.sc-focus .atv4.calendar.event-inspector-panel .sc-scroller-view.me-capless-mini-scroller-view.sc-vertical .cap,.sc-focus .atv4.calendar.event-inspector-panel .sc-scroller-view.me-capless-mini-scroller-view.sc-vertical .endcap,.sc-focus .atv4.calendar.event-inspector-panel .sc-scroller-view.me-capless-mini-scroller-view.sc-vertical .thumb .thumb-top,.sc-focus .atv4.calendar.event-inspector-panel .sc-scroller-view.me-capless-mini-scroller-view.sc-vertical .thumb .thumb-bottom{z-index:21}.calendar.sc-label-view.note-field.note-text-wrapping.sc-regular-size{font-size:13px}.event-inspector-panel .scroll .event-time-fields{overflow:visible}.event-inspector-panel .scroll .time-meridian{float:left;position:relative;margin-right:4px}:lang(hi-in) .event-inspector-panel .scroll .event-time-fields{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}:lang(hi-in) .event-inspector-panel .scroll .event-time-fields>*{-webkit-box-flex:0;-ms-flex:none;flex:none}:lang(hi-in) .event-inspector-panel .scroll .time-meridian{float:none;margin-right:0;margin-left:4px}:lang(hi-in) .event-inspector-panel .scroll .time-meridian+.time-meridian.dropdown{margin-left:0}.event-inspector-panel .scroll .select-field-margin{margin-left:0}.event-inspector-panel .scroll .attachments-uploading-view{background:#fff;background-color:#fff;opacity:0.8;position:relative;z-index:100}.event-inspector-panel .scroll .attachments-uploading-view div .upload-label{font-size:15px;color:#686a6c}.event-inspector-panel .well.hover{box-shadow:inset 0 1px 0 0 #eaeaea,0 0 5px #36a2ea;-webkit-box-shadow:inset 0 1px 0 0 #eaeaea,#36a2ea 0 0 5px;-moz-box-shadow:inset 0 1px 0 0 #eaeaea,#36a2ea 0 0 5px;border-color:#5c90b3;overflow:visible}.event-inspector-panel .loading-opacity{opacity:0.9}.ie7 .event-inspector-panel .loading-opacity,.ie8 .event-inspector-panel .loading-opacity{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90)}.event-inspector-panel .loading-opacity table td.uploading-attachments{font-size:15px;opacity:0.6}.ie7 .event-inspector-panel .loading-opacity table td.uploading-attachments,.ie8 .event-inspector-panel .loading-opacity table td.uploading-attachments{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=60)}.event-inspector-panel .event-inspector-bottom{border-top:1px solid #d9d9d9}.event-inspector-panel .url-field{color:#08c;text-decoration:none;word-wrap:normal;cursor:pointer}.event-inspector-panel .url-field:hover{text-decoration:underline}div.ei-attachment-progress{background-color:#cfcfcf;border:1px #aaaaaa;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}div.ei-attachment-progress div.progress-bar{background-color:#ffffff;overflow:hidden;position:absolute;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}
-    </style>
-    <style type="text/css">
-      .sc-view.repeatEnd,.sc-view.repeatEndAfter,.sc-view.repeatEndOnDate,.sc-view.repeatEnd .repeatEndRecLabel{
-        overflow:visible
+      html {
+        touch-action: none;
       }
     </style>
     <style type="text/css">
-      .atv4.calendar.editable-alarms .alarm-type .label,.atv4.calendar.editable-alarms .alarm-collection .alarm-item .label{line-height:1.9}.atv4.calendar.editable-alarms .alarm-type,.atv4.calendar.editable-alarms .alarm-type .dropdown,.atv4.calendar.editable-alarms,.atv4.calendar.editable-alarms .alarm-collection,.atv4.calendar.editable-alarms .alarm-collection .alarm-item,.atv4.calendar.editable-alarms .alarm-collection .alarm-item .dropdown{overflow:visible}.atv4.calendar.inspector-label.alarm{padding-top:7px}
-    </style>
-    <style type="text/css">
-      .ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis}.atv4.calendar.sc-button-view.square.sc-small-size.def.invitee-add-save-button{background-position:right -1872px}.atv4.calendar.sc-button-view.square.sc-small-size.def.invitee-add-save-button .sc-button-inner{background-position:0 -1368px}.atv4.calendar.sc-button-view.square.sc-small-size.def.invitee-add-save-button .sc-button-label{background-position:0 -1728px}.atv4.calendar.sc-text-field-view.sc-regular-size.text-field.text-padding{min-height:20px}.msie.ie7 .atv4.calendar.sc-button-view.square.sc-small-size.add-invitee-button .sc-button-label{min-width:89px}
-    </style>
-    <style type="text/css">
-      .atv4.calendar.attachmentsView div.addAttachment.button.sc-small-size label.sc-button-label,.attach-readOnly div.addAttachment.button.sc-small-size label.sc-button-label {
-        padding:0 0 0 0;
-        margin-right:1px;
-        margin-left:10px;
-        text-align:left
-      }
-      .atv4.calendar.attachmentsView div.addAttachment.button.sc-small-size .upload-drop-target-container,.attach-readOnly div.addAttachment.button.sc-small-size .upload-drop-target-container{display:block}.atv4.calendar.attachmentsView div.addAttachment.button.sc-small-size .upload-drop-target-container .upload-drop-target-file,.attach-readOnly div.addAttachment.button.sc-small-size .upload-drop-target-container .upload-drop-target-file {
-        position:absolute;
-        top:0;
-        right:0;
-        bottom:0;
-        background:black;
-        opacity:0;
-        cursor:pointer
-      }
-
-      .atv4.calendar.attachmentsView .sc-list-view .sc-list-item-view label,.attach-readOnly .sc-list-view .sc-list-item-view label {
-        padding-right:16px
-      }
-
-      .atv4.calendar.attachmentsView .sc-list-view .sc-list-item-view.sel,.attach-readOnly .sc-list-view .sc-list-item-view.sel {
-        background:none
-      }
-
-      .atv4.calendar.attachmentsView .sc-list-view .sc-list-item-view a.url,.attach-readOnly .sc-list-view .sc-list-item-view a.url {
-        color:#B3B3B3;
-        right:20px;
-        left:19px;
-        position:
-        absolute;
-        text-decoration:none;
-        top:3px;
-        padding-bottom:1px;
-        overflow:hidden;
-        text-overflow:ellipsis;
-        white-space:nowrap
-      }
-
-      .atv4.calendar.attachmentsView .sc-list-view .sc-list-item-view a.url.link,.attach-readOnly .sc-list-view .sc-list-item-view a.url.link {
-        color:#167efb
-      }
-
-      .atv4.calendar.attachmentsView .sc-list-view .sc-list-item-view a.link:hover,.attach-readOnly .sc-list-view .sc-list-item-view a.link:hover {
-        text-decoration:underline
-      }
-
-      .atv4.calendar.attachmentsView .sc-list-view .sc-list-item-view img.attachment-icon,.attach-readOnly .sc-list-view .sc-list-item-view img.attachment-icon {
-        margin-top:2px
-      }
-
-      .atv4.calendar.attachmentsView .sc-list-view .sc-list-item-view div.remove-attachment,.attach-readOnly .sc-list-view .sc-list-item-view div.remove-attachment {
-        background-size: 16px 32px;
-        background-image: url("/applications/calendar/1907Project36/frameworks/calendar/secondary/event_inspector/attachments/1907Project36/en-us/stylesheet-1@2x.png");
-        background-position: 0px -16px;
-        background-repeat:no-repeat;
-        width:16px;
-        height:16px;
-        right:0;
-        top:3px;
-        position:absolute
-      }
-
-      .atv4.calendar.attachmentsView .sc-list-view .sc-list-item-view div.remove-attachment.active,.attach-readOnly .sc-list-view .sc-list-item-view div.remove-attachment.active {
-        background-size: 16px 32px;
-        background-image: url("/applications/calendar/1907Project36/frameworks/calendar/secondary/event_inspector/attachments/1907Project36/en-us/stylesheet-1@2x.png");
-        background-position: 0px 0px;
-        background-repeat:no-repeat
-      }
-
-      .atv4.calendar.attachmentsView .inspector-label.invitee-warning,.attach-readOnly .inspector-label.invitee-warning {
-        line-height:16px;
-        color:#686A6C
-      }
-
-      .cw-alert.sc-pane.sc-panel a.attachment-alert {
-        color:#0067e8
-      }
-
-      .cw-alert.sc-pane.sc-panel a.attachment-alert:link,.cw-alert.sc-pane.sc-panel a.attachment-alert:visited {
-        text-decoration:none
-      }
-
-      .cw-alert.sc-pane.sc-panel a.attachment-alert:hover {
-        text-decoration:underline
+      .sc1970 {
+        cursor: auto;
       }
     </style>
   </head>
-  <body class="webkit"style="overflow: hidden;">
-    <div class="sc-view sc-pane focus" style="left: 0px; right: 0px; top: 0px; bottom: 0px; min-width: 950px; min-height: 550px;">
+  <body class="sc-theme box-shadow border-rad chrome windows webkit en-us sc-blur" style="overflow: hidden;">
+    <div class="atv4 calendar sc-view sc-pane sc-main focus" style="left: 0px; right: 0px; top: 0px; bottom: 0px; min-width: 950px; min-height: 550px;">
       <div class="sc-view app-view" style="left: 0px; right: 0px; top: 0px; bottom: 0px; ">
-        <div class="sc1971 sc-view  sc-layout-horizontal" style="left: 0px; right: 0px; top: 0px; bottom: 0px; ">
-          <div class="sc1971 sc-view main-content" style="left: 0px; top: 0px; bottom: 0px; width: 100%;">
-            <div class="atv4 sc1972 sc-view main-header" style="left: 0px; right: 0px; top: 0px; height: 44px; ">
-              <div class="sc1971 sc-view navigation-control display-header" style="left: 50%; top: 4px; width: 203.188px; height: 36px; margin-left: calc(-197.875px  / 2);">
-                <div id="sc2117" class="atv4 sc1971 sc-view sc-label-view navigation-control-date large-display-text label sc-huge-size" style="left: 1px; right: 0px; top: 0px; bottom: 0px; text-align: center;">
+        <div class="atv4 calendar sc1970 sc-view sc-split-view split sc-layout-horizontal" style="left: 0px; right: 0px; top: 0px; bottom: 0px; ">
+          <div class="atv4 calendar sc1970 sc-view right main-content" style="left: 0px; top: 0px; bottom: 0px; width: 100%;">
+            <div class="atv4 calendar sc1970 sc-view main-header" style="left: 0px; right: 0px; top: 0px; height: 44px; ">
+              <div class="atv4 calendar sc1970 sc-view navigation-control display-header month-view" style="left: 50%; top: 4px; width: 203.188px; height: 36px; margin-left: calc(-197.875px  / 2);">
+                <div id="sc2117" class="atv4 calendar sc1970 sc-view sc-label-view navigation-control-date large-display-text label sc-huge-size" style="left: 1px; right: 0px; top: 0px; bottom: 0px; text-align: center;">
                   <strong>Oh hi Mark</strong>
                 </div>
-                <div class="sc-view arrow previous-arrow" onClick = "goToPreviousMonth()">
+                <div class="atv4 calendar sc1970 sc-view arrow previous-arrow" style="left: 0px; width: 36px; top: 0px; height: 36px; " onClick = "goToPreviousMonth()">
                   <div class="arrow-image"></div>
                 </div>
-                <div class="sc-view arrow next-arrow" onClick = "goToNextMonth()">
+                <div class="sc-view arrow next-arrow" style="right: 0px; width: 36px; top: 0px; height: 36px; "onClick = "goToNextMonth()">
                   <div class="arrow-image"></div>
+                </div>
+              </div>
+              <div class="atv4 icloud-controls calendar sc1970 sc-view app-switcher" style="left: 0px; width: 180.229px; top: 0px; height: 44px;">
+                <div class="atv4 icloud-controls calendar borderless sc1970 sc-view sc-button-view large-display-text button sc-huge-size" style="left: 13px; right: 0px; top: -6px; bottom: 0px; ">
+                  <label id="sc2326-label" class="sc-button-label sc-huge-size ellipsis">Calendar</label>
+                  <div class="icloud-text image"></div>
+                </div>
+              </div>
+              <div class="atv4 icloud-controls calendar sc1970 sc-view account-menu" style="right: 0px; top: 0px; width: 129.896px; height: 44px;">
+                <div class="atv4 icloud-controls calendar borderless sc1970 sc-view sc-button-view account-menu large-display-text button sc-huge-size" style="left: 0px; right: 45px; top: -5px; bottom: 0px;">
+                  <label id="sc2328-label" class="sc-button-label sc-huge-size ellipsis">Roody</label>
                 </div>
               </div>
             </div>
             <div class="sc-view main-container">
-              <div class="sc1971 sc-view month num-rows5">
+              <div class="sc1970 sc-view month num-rows5">
                 <div class="headings">
                   <div class="col col1">
                     Sun
@@ -366,9 +260,9 @@
                 </div>
               </div>
             </div>
-            <div class="sc1971 sc-view main-footer" style="left: 0px; right: 0px; bottom: 0px; height: 44px; ">
-              <div class="sc1971 sc-view last-section sc-static-layout" style="flex-basis: 122.719px;">
-                <div title="New Event" class="atv4 calendar borderless sc1971 sc-view sc-button-view sc-static-layout button sc-regular-size sel">
+            <div class="sc1970 sc-view main-footer" style="left: 0px; right: 0px; bottom: 0px; height: 44px; ">
+              <div class="sc1970 sc-view last-section sc-static-layout" style="flex-basis: 122.719px;">
+                <div title="New Event" class="atv4 calendar borderless sc1970 sc-view sc-button-view sc-static-layout button sc-regular-size sel">
                   <label class="sc-button-label sc-regular-size icon">
                     <img src="images/add_event.png" class="icon add-event-icon">
                   </label>
@@ -538,4 +432,4 @@
   </body>
 </html>
 
-<script src="javascript/main.js"></script>
+<script src="javascript/date.js"></script>

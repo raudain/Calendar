@@ -26,6 +26,19 @@ body {
     display: none !important;
 }
 
+
+
+
+
+.atv4.button {
+    cursor: pointer;
+    border: 0px none;
+    vertical-align: top;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
 .sc-view {
   cursor: default;
   overflow: hidden;
@@ -80,14 +93,6 @@ body {
     position: relative;
 }
 
-.sc1971 {
-  cursor: auto;
-}
-
-.sc1972 {
-  cursor: auto;
-}
-
 .sc-pane {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -128,7 +133,8 @@ body {
 
 /* ------------------------ Header ---------------------------- */
 
-.main-header {
+.atv4.calendar.sc-main .main-header {
+  background-image: -webkit-linear-gradient(#fdfdfd, #f9f9f9);
   background-image: linear-gradient(#fdfdfd, #f9f9f9);
 }
 
@@ -145,64 +151,16 @@ body {
   font-size: 21px;
 }
 
-.atv4 .large-display-text {
-  font-family: 'SFNSDisplay', 'SFNSText', 'Helvetica Neue', sans-serif;
-}
-
-.sc-label-view.sc-huge-size {
+.atv4.sc-label-view.sc-huge-size {
   line-height: 27px;
 }
 
-.navigation-control .navigation-control-date {
-  margin-top: 4px;
-  cursor: default;
-  pointer-events: none;
-}
-
-.navigation-control .navigation-control-date {
-  color: #333;
-}
-
-.label.sc-huge-size {
-  font-weight: 300;
-}
-
-.navigation-control .navigation-control-date {
-  margin-top: 5px;
-}
-
 strong {
-  font-weight: 550;
-}
-
-.arrow {
-  cursor: pointer;
-  width: 36px;
-  top: 0px;
-  height: 36px;
-}
-
-.previous-arrow {
-  left: 0px;
+  font-weight: 500;
 }
 
 .next-arrow {
   right: 0px;
-}
-
-.arrow-image {
-  background-size: 168px 911px;
-  background-image: url(images/background.png);
-  background-repeat: no-no-repeat;
-  width: 10px;
-  top: 10px;
-  height: 16px;
-  position: absolute;
-}
-
-.display-header .previous-arrow .arrow-image {
-  left: 19px;
-  background-position: -156px -576px;
 }
 
 .display-header .next-arrow .arrow-image {
@@ -258,6 +216,14 @@ strong {
   margin-left: 7px;
 }
 
+
+
+
+.atv4.icloud-controls.account-menu .sc-button-view.button .sc-button-label {
+    text-align: right;
+    padding-right: 18px;
+}
+
 .month-body {
   min-height: 300px;
   position: absolute;
@@ -276,13 +242,16 @@ strong {
 .row1 {
   top: 0;
 }
-
 .row2 {
   top: 20%;
 }
-
 .row3 {
   top: 40%;
+}
+
+.atv4 .large-display-text {
+  /*font-family: 'SFNSDisplay', 'SFNSText', 'Helvetica Neue', sans-serif;*/
+  font-family: 'Helvetica';
 }
 
 .row4 {
@@ -425,15 +394,6 @@ div.col.today .cell-container {
   justify-content: flex-end;
 }
 
-.atv4.button {
-    cursor: pointer;
-    border: 0px none;
-    vertical-align: top;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
 .atv4.sc-checkbox-view {
     color: #1a1a1a;
     margin-right: 4px;
@@ -497,7 +457,7 @@ div.col.today .cell-container {
   line-height: 26px;
 }
 
-.borderless.sc-button-view.button .sc-button-label {
+.atv4.borderless.sc-button-view.button .sc-button-label {
   cursor: inherit;
   top: 50%;
   color: #167efb;
@@ -797,6 +757,10 @@ body textarea, body input {
     font-family: 'SFNSText', 'Helvetica Neue', sans-serif;
 }
 
+.windows.chrome .atv4.calendar.navigation-control .navigation-control-date {
+  margin-top: 5px;
+}
+
 .sc-text-field-view input {
     position: absolute;
     top: 0px;
@@ -816,6 +780,12 @@ body textarea, body input {
     color: #1a1a1a;
 }
 
+.atv4.calendar.navigation-control .navigation-control-date {
+  margin-top: 4px;
+  cursor: default;
+  pointer-events: none;
+}
+
 .padding .field {
     font-size: inherit;
     font-family: inherit;
@@ -832,6 +802,14 @@ body textarea, body input {
     border-radius: 3px;
     box-shadow: 0px 1px 1px #fafafa;
     background-color: #fafafa;
+}
+
+.atv4.calendar.navigation-control .navigation-control-date {
+  color: #333;
+}
+
+.atv4.calendar.label.sc-huge-size {
+  font-weight: 300;
 }
 
 .sc-regular-size.square.button {
@@ -1040,4 +1018,81 @@ body textarea, body input {
     border: none;
     outline: none;
     -webkit-appearance: none;
+}
+
+.atv4.sc-huge-size.borderless.button {
+    height: 54px;
+}
+
+.atv4.icloud-controls.app-switcher>.sc-button-view.button {
+    margin-left: -1px;
+    margin-top: 1px;
+}
+
+.calendar .atv4.calendar.app-switcher .button, .calendar .atv4.calendar.account-menu.button {
+    color: #f92e31;
+}
+
+.atv4.sc-huge-size.button .sc-button-label {
+    font-size: 17px;
+    min-height: 30px;
+    line-height: 30px;
+}
+
+.atv4.icloud-controls.app-switcher .sc-button-label {
+    left: 66px;
+    text-align: left;
+}
+
+.atv4.sc-huge-size.borderless.button .sc-button-label {
+    font-size: 21px;
+    line-height: 30px;
+    margin-top: -15px;
+    padding: 0px 0px 0px 0px;
+}
+
+.calendar .atv4.calendar.app-switcher .button .sc-button-label, .calendar .atv4.calendar.account-menu.button .sc-button-label {
+    color: inherit;
+}
+
+.windows.webkit .atv4.sc-huge-size.borderless.button .sc-button-label {
+    line-height: 31px;
+}
+
+.atv4.icloud-controls.app-switcher .icloud-text.image {
+    position: absolute;
+    width: 59px;
+    height: 17px;
+    top: 19px;
+    background-size: 168px 911px;
+    background-image: url(images/background.png);
+    background-position: 0px -576px;
+    background-repeat: no-repeat;
+}
+
+.atv4.calendar.navigation-control .arrow {
+    cursor: pointer;
+}
+
+.atv4.calendar.navigation-control .arrow .arrow-image {
+    width: 10px;
+    top: 10px;
+    height: 16px;
+    position: absolute;
+}
+
+.atv4.calendar.navigation-control .previous-arrow .arrow-image {
+    left: 19px;
+    background-size: 168px 911px;
+    background-image: url(images/background.png);
+    background-position: -156px -503px;
+    background-repeat: no-repeat;
+}
+
+.atv4.calendar.navigation-control .next-arrow .arrow-image {
+    left: 7px;
+    background-size: 168px 911px;
+    background-image: url(images/background.png);
+    background-position: -114px -690px;
+    background-repeat: no-repeat;
 }

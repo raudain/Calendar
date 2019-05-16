@@ -216,18 +216,12 @@ strong {
   margin-left: 7px;
 }
 
-
-
-
 .atv4.icloud-controls.account-menu .sc-button-view.button .sc-button-label {
     text-align: right;
     padding-right: 18px;
 }
 
-.month-body {
-  min-height: 300px;
-  position: absolute;
-  top: 27px;
+.month .month-body {
   left: 0;
   right: 0;
   bottom: 0;
@@ -271,43 +265,6 @@ strong {
   z-index: 1;
 }
 
-.col {
-  width: 14.285714285714286%;
-  top: 0;
-  bottom: 0;
-  font-family: 'SFNSText', 'Helvetica Neue', sans-serif;
-  text-rendering: optimizeLegibility;
-}
-
-.col1 {
-  left: 0%;
-  right: auto;
-}
-
-.col2 {
-  left: 14.285714285714286%;
-}
-
-.col3 {
-  left: 28.571428571428572%;
-}
-
-.col4 {
-  left: 42.857142857142858%;
-}
-
-.col5 {
-  left: 57.142857142857144%;
-}
-
-.col6 {
-  left: 71.42857142857143%;
-}
-
-.col7 {
-  left: 85.714285714285716%;
-}
-
 div.col .cell-container {
   left: 3px;
   right: 3px;
@@ -336,7 +293,7 @@ div.col.today .cell-container {
   font-weight: 500;
 }
 
-.off-month {
+.atv4.calendar.month-canvas.month .month-body .off-month .cell-container {
   color: #999;
 }
 
@@ -350,7 +307,7 @@ div.col.today .cell-container {
   text-rendering: optimizeLegibility;
 }
 
-.weekend div{
+.month-canvas.month .month-body .row div.col.weekend .cell-container {
   background-color: #f7f7f7;
 }
 
@@ -1095,4 +1052,60 @@ body textarea, body input {
     background-image: url(images/background.png);
     background-position: -114px -690px;
     background-repeat: no-repeat;
+}
+
+.month-canvas.month .month-body {
+    min-height: 300px;
+    top: 27px;
+}
+
+.month-canvas.month .month-body, .overflow .number {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.01);
+}
+
+.month .col {
+    top: 0;
+    bottom: 0;
+}
+
+.month .col1, .safari .month .drag-view.col1 {
+    width: 14.285714285714286%;
+    left: 0%;
+    right: auto;
+}
+
+.month .col2, .safari .month .drag-view.col2 {
+    width: 14.285714285714286%;
+    left: 14.285714285714286%;
+    right: auto;
+}
+
+.month .col3, .safari .month .drag-view.col3 {
+    width: 14.285714285714286%;
+    left: 28.571428571428572%;
+    right: auto;
+}
+
+.month .col4, .safari .month .drag-view.col4 {
+    width: 14.285714285714286%;
+    left: 42.857142857142858%;
+    right: auto;
+}
+
+.month .col5, .safari .month .drag-view.col5 {
+    width: 14.285714285714286%;
+    left: 57.142857142857144%;
+    right: auto;
+}
+
+.month .col6, .safari .month .drag-view.col6 {
+    width: 14.285714285714286%;
+    left: 71.42857142857143%;
+    right: auto;
+}
+
+.month .col7, .safari .month .drag-view.col7 {
+    width: 14.285714285714286%;
+    left: 85.714285714285716%;
+    right: auto;
 }

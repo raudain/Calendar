@@ -1,6 +1,7 @@
 var todaysDate = new Date();
 var thisMonth = todaysDate.getMonth();
 var startingDay;
+var maximumDay;
 
 function setMonth(date) {
   var getMonth = document.getElementById("sc2117");
@@ -21,59 +22,62 @@ function setWeek() {
 }
 setWeek();
 
-function setStartingDay() {
+function getStartingDay() {
   var firstOfTheMonth = new Date(2018, thisMonth, 1);
   var dayOfTheWeek = firstOfTheMonth.getDay();
+  var day;
   switch (dayOfTheWeek) {
     case 0:
-      startingDay = "Sunday";
+      day = "Sunday";
       break;
     case 1:
-      startingDay = "Monday";
+      day = "Monday";
       break;
     case 2:
-      startingDay = 28;
+      day = 28;
       break;
     case 3:
-      startingDay = "Wednesday";
+      day = "Wednesday";
       break;
     case 4:
-      startingDay = "Thursday";
+      day = "Thursday";
       break;
     case 5:
-      startingDay = "Friday";
+      day = "Friday";
       break;
     case  6:
-      startingDay = "Saturday";
+      day = "Saturday";
   }
+  return day;
 }
-setStartingDay();
+startingDay = getStartingDay();
 
-var maximumDay;
-function setMaximumDay() {
-  maximumDay = 31;
+function getMaximumDay() {
+  return 30;
 }
-setMaximumDay();
+maximumDay = getMaximumDay();
 
 function setGridCellAtribute() {
-  var getGridCell = document.querySelectorAll("[role]");
+  var monthBodyCollection = document.getElementsByClassName("month-body");
+  var gridCellCollection = monthBodyCollection[0].getElementsByClassName("col");
   var i = 0;
   var dayCounter = startingDay;
   var gridCellClass;
   var cell;
-  while (i < getGridCell.length) {
-    cell = getGridCell[i];
-    // Set off month class
-    if (true) {
-
-    }
+  var offMonth = true;
+  while (i < gridCellCollection.length) {
+    cell = gridCellCollection[i];
+    gridCellClass = cell.className
     // Set class for today's date
     if (dayCounter == todaysDate.getDate()) {
-      gridCellClass = cell.className
       cell.setAttribute("class", gridCellClass + " today");
+      offMonth = false;
     }
-    // set day number
-    cell.setAttribute("d", dayCounter);
+    // Set off month class
+    if (offMonth) {
+      cell.setAttribute("class", gridCellClass + " off-month");
+    }
+    // increment day counter
     if (dayCounter < maximumDay) {
       dayCounter = dayCounter + 1;
     } else {
@@ -82,6 +86,7 @@ function setGridCellAtribute() {
     i = i + 1;
   }
 }
+setGridCellAtribute();
 
 var getDay = document.getElementsByClassName("dt");
 i = 0;

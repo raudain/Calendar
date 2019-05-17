@@ -1,7 +1,6 @@
 var todaysDate = new Date();
 var thisMonth = todaysDate.getMonth();
 var startingDay;
-var maximumDay;
 
 function setMonth(date) {
   var getMonth = document.getElementById("sc2117");
@@ -17,14 +16,6 @@ function getHeaderWidth() {
 }
 var headerCollection = document.getElementsByClassName("display-header");
 headerCollection[0].style.width = getHeaderWidth();
-
-function setWeek() {
-  var getThisWeek = document.getElementsByClassName("row5");
-  var thisWeekLine = document.createElement("DIV");
-  thisWeekLine.className = "this-week-line";
-  getThisWeek[0].appendChild(thisWeekLine);
-}
-setWeek();
 
 function getStartingDay() {
   var firstOfTheMonth = new Date(2018, thisMonth, 1);
@@ -56,9 +47,9 @@ function getStartingDay() {
 }
 startingDay = getStartingDay();
 
-function getMaximumDay() {
+function getlastDayOfTheMonth(month) {
   var max;
-  switch (thisMonth) {
+  switch (month) {
     case 0:
       max = "Sunday";
       break;
@@ -82,26 +73,34 @@ function getMaximumDay() {
   }
   return max;
 }
-maximumDay = getMaximumDay();
 
-function setGridCellAtribute() {
+function setCalendar() {
   var monthBodyCollection = document.getElementsByClassName("month-body");
   var gridCellCollection = monthBodyCollection[0].getElementsByClassName("col");
+  var dayCollection = document.getElementsByClassName("dt");
+
   var i = 0;
+
   var dayCounter = startingDay;
   var gridCellClass;
   var cell;
   var offMonth = true;
+  var maximumDay = getlastDayOfTheMonth(thisMonth - 1);
   while (i < gridCellCollection.length) {
     cell = gridCellCollection[i];
     gridCellClass = cell.className
-    // remove off month class
     if (dayCounter == 1) {
       offMonth = false;
+      maximumDay = getlastDayOfTheMonth(thisMonth);
     }
     // Set class for today's date
     if (dayCounter == todaysDate.getDate()) {
       cell.setAttribute("class", gridCellClass + " today");
+
+      var thisWeek = cell.parentElement;
+      var weekLine = document.createElement("DIV");
+      weekLine.setAttribute("class", "this-week-line");
+      thisWeek.appendChild(weekLine);
     }
     // Set off month class
     if (offMonth) {
@@ -111,6 +110,7 @@ function setGridCellAtribute() {
     if (true) {
 
     }
+    dayCollection[i].innerHTML = dayCounter;
     if (dayCounter < maximumDay) {
       dayCounter = dayCounter + 1;
     } else {
@@ -118,21 +118,9 @@ function setGridCellAtribute() {
     }
     i = i + 1;
   }
+  dayCounter = startingDay;
 }
-setGridCellAtribute();
-
-var getDay = document.getElementsByClassName("dt");
-i = 0;
-var day = startingDay;
-while (i < getDay.length) {
-  getDay[i].innerHTML = day;
-  i = i + 1;
-  if (day < maximumDay) {
-    day = day + 1;
-  } else {
-    day = 1;
-  }
-}
+setCalendar();
 
 function goToPreviousMonth() {
   month = month - 1;

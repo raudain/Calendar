@@ -26,19 +26,6 @@ body {
     display: none !important;
 }
 
-
-
-
-
-.atv4.button {
-    cursor: pointer;
-    border: 0px none;
-    vertical-align: top;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
 .sc-view {
   cursor: default;
   overflow: hidden;
@@ -97,6 +84,15 @@ body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
+
+.atv4.button {
+    cursor: pointer;
+    border: 0px none;
+    vertical-align: top;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 .app-line {
@@ -171,10 +167,6 @@ strong {
 /* ------------------------ End Header ---------------------------- */
 
 
-.main-container div {
-  position: absolute;
-}
-
 .month {
   border: 1px, solid white;
 }
@@ -210,7 +202,7 @@ strong {
   right: 0;
 }
 
-.headings div{
+.month-canvas.month .headings div {
   cursor: default;
   text-align: left;
   margin-left: 7px;
@@ -256,7 +248,7 @@ strong {
   top: 80%;
 }
 
-.this-week-line {
+.month-canvas.month .month-body .row .this-week-line {
   left: 3px;
   right: 0;
   top: 0;
@@ -314,7 +306,7 @@ div.col.today .cell-container {
 
 /* ---------------------------- Footer -------------------------*/
 
-.main-footer {
+.atv4.calendar.right.main-content .main-footer {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -327,7 +319,7 @@ div.col.today .cell-container {
   flex-flow: row nowrap;
 }
 
-.main-footer>* {
+.atv4.calendar.right.main-content .main-footer>* {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -340,7 +332,7 @@ div.col.today .cell-container {
   flex-flow: row nowrap;
 }
 
-.last-section {
+.atv4.calendar.right.main-content .main-footer .last-section {
   -webkit-box-flex: 1 1 auto;
   -moz-box-flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
@@ -458,16 +450,14 @@ div.col.today .cell-container {
 }
 
 .button .add-event-icon {
-    background-size: 168px 911px;
     background-image: url(images/background.png);
     background-position: -78px -503px;
     background-repeat: no-repeat;
 }
 
 .button .add-event-icon:hover {
-    background-size: 168px 911px;
     background-image: url(images/background.png);
-    background-position: -52px -503px;
+    background-position: -26px -529px;
     background-repeat: no-repeat;
 }
 
@@ -565,6 +555,11 @@ div.col.today .cell-container {
 
 .sc-picker.sc-panel>.sc-view {
     z-index: 1;
+}
+
+
+.month div {
+    position: absolute;
 }
 
 .sc-panel.pop-over .picker-contentView {
@@ -1108,4 +1103,33 @@ body textarea, body input {
     width: 14.285714285714286%;
     left: 85.714285714285716%;
     right: auto;
+}
+
+.month .headings div {
+    text-align: center;
+}
+
+.atv4.calendar.right.main-content .main-footer .first-section {
+    -webkit-box-flex: 1 0 auto;
+    -moz-box-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.atv4.calendar.right.main-content .main-footer .middle-section {
+    -webkit-box-flex: 1 0 auto;
+    -moz-box-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    top: 9px;
+    height: 28px;
+    white-space: nowrap;
 }

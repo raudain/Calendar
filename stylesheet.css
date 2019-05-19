@@ -167,17 +167,6 @@ strong {
 /* ------------------------ End Header ---------------------------- */
 
 
-.month {
-  border: 1px, solid white;
-}
-
-.num-rows5 {
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-}
-
 .main-container {
   left: 0px;
   right: 0px;
@@ -228,9 +217,7 @@ strong {
 .row1 {
   top: 0;
 }
-.row2 {
-  top: 20%;
-}
+
 .row3 {
   top: 40%;
 }
@@ -414,17 +401,17 @@ div.col.today .cell-container {
   padding: 0px 0px 0px 0px;
 }
 
-.sc-regular-size.borderless.button .sc-button-label {
+.atv4.sc-regular-size.borderless.button .sc-button-label {
   font-size: 17px;
   line-height: 24px;
   margin-top: -12px;
   padding: 0px 0px 0px 0px;
 }
 
-.sc-button-view.button.sel .sc-button-label,
+/*.sc-button-view.button.sel .sc-button-label,
 .button.def .sc-button-label {
   font-weight: 500;
-}
+}*/
 
 .main-footer .calendar.button.borderless .sc-button-label {
     color: #ff3b30;
@@ -570,6 +557,48 @@ div.col.today .cell-container {
     border-top: 1px solid #d9d9d9;
 }
 
+.month .col1, .safari .month .drag-view.col1 {
+    width: 14.285714285714286%;
+    left: 0%;
+    right: auto;
+}
+
+.month .col7, .safari .month .drag-view.col7 {
+    width: 14.285714285714286%;
+    left: 85.714285714285716%;
+    right: auto;
+}
+
+.month-events .sc-collection-item .title, .month-events .sc-collection-item .time, .month-events .sc-collection-item .end-time {
+    position: static;
+    display: block;
+    padding-top: 3px;
+    height: 18px;
+    z-index: 13;
+}
+
+.month-events .sc-collection-item .title {
+    margin-left: 19px;
+    margin-right: 4px;
+}
+
+.month-events .sc-collection-item.timed .title {
+    margin-right: 0;
+}
+
+.month-events .multi-row, .month-events .timed, .month-events .allday {
+    position: absolute !important;
+    overflow: hidden;
+    line-height: 11px;
+}
+
+.month.num-rows5 .row1, .month.num-rows5 .row2, .month.num-rows5 .row3, .month.num-rows5 .row4, .month.num-rows5 .row5, .month.num-rows5 .row6 {
+    height: 20%;
+}
+
+.month.num-rows5 .row2 {
+  top: 20%;
+}
 
 /* --------------------------- New Event Right Buttons ------------- */
 
@@ -868,7 +897,6 @@ body textarea, body input {
     height: 16px;
     position: absolute;
     top: 0px;
-    background-size: 168px 911px;
     background-image: url(images/background.png);
     background-position: 0px -626px;
     background-repeat: no-repeat;
@@ -934,20 +962,19 @@ body textarea, body input {
     right: 6px;
     width: 16px;
     height: 16px;
-    background-size: 168px 911px;
     background-image: url(images/background.png);
     background-position: -48px -690px;
     background-repeat: no-repeat;
 }
 
-.sc-small-size.borderless.button .sc-button-label {
+.atv4.sc-small-size.borderless.button .sc-button-label {
     font-size: 15px;
     line-height: 20px;
     margin-top: -9px;
     padding: 0px 0px 0px 0px;
 }
 
-.sc-small-size.borderless.button .sc-button-label {
+.windows.webkit .atv4.sc-small-size.borderless.button .sc-button-label {
     line-height: 21px;
 }
 
@@ -1016,7 +1043,6 @@ body textarea, body input {
     width: 59px;
     height: 17px;
     top: 19px;
-    background-size: 168px 911px;
     background-image: url(images/background.png);
     background-position: 0px -576px;
     background-repeat: no-repeat;
@@ -1035,7 +1061,6 @@ body textarea, body input {
 
 .atv4.calendar.navigation-control .previous-arrow .arrow-image {
     left: 19px;
-    background-size: 168px 911px;
     background-image: url(images/background.png);
     background-position: -156px -503px;
     background-repeat: no-repeat;
@@ -1043,7 +1068,6 @@ body textarea, body input {
 
 .atv4.calendar.navigation-control .next-arrow .arrow-image {
     left: 7px;
-    background-size: 168px 911px;
     background-image: url(images/background.png);
     background-position: -114px -690px;
     background-repeat: no-repeat;
@@ -1061,12 +1085,6 @@ body textarea, body input {
 .month .col {
     top: 0;
     bottom: 0;
-}
-
-.month .col1, .safari .month .drag-view.col1 {
-    width: 14.285714285714286%;
-    left: 0%;
-    right: auto;
 }
 
 .month .col2, .safari .month .drag-view.col2 {
@@ -1099,12 +1117,6 @@ body textarea, body input {
     right: auto;
 }
 
-.month .col7, .safari .month .drag-view.col7 {
-    width: 14.285714285714286%;
-    left: 85.714285714285716%;
-    right: auto;
-}
-
 .month .headings div {
     text-align: center;
 }
@@ -1132,4 +1144,112 @@ body textarea, body input {
     top: 9px;
     height: 28px;
     white-space: nowrap;
+}
+
+.atv4.sc-small-size {
+    font-size: 11px;
+}
+
+.atv4.sc-small-size.borderless.button {
+    height: 33px;
+}
+
+.month-events {
+    min-height: 302px;
+    overflow: visible;
+    z-index: 10;
+}
+
+.month-events .container {
+    height: 18px;
+    position: absolute;
+    right: 0;
+    left: 1px;
+    overflow: hidden;
+}
+
+.month-events div.container div {
+    white-space: nowrap;
+    z-index: -1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.month-events .sc-collection-item .bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1px;
+    right: 2px;
+}
+
+
+/* ------------------------------ Events on Calendar  ------------------*/
+
+w .event-canvas .event-dot, .event-dot {
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    margin-top: -3px;
+    left: 9px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.month-events .sc-collection-item.sel .bg {
+    opacity: 1;
+}
+
+.month-events div.timed.single-day div.bg {
+    display: none;
+}
+
+.month-events div.timed.single-day.sel div.bg {
+    display: block;
+}
+
+.month-events .sc-collection-item .event-dot {
+    left: 7px;
+}
+
+.month-events .sc-collection-item.sel .event-dot {
+    background-color: #fff !important;
+    opacity: 1;
+}
+
+.month-events .sc-collection-item.timed .time {
+    float: right;
+    text-overflow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 4px;
+    margin-right: 6px;
+    text-align: right;
+}
+
+.month-events .sc-collection-item.sel .title, .month-events .sc-collection-item.sel .time, .month-events .sc-collection-item.sel .end-time {
+    color: #fff !important;
+    text-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.windows.chrome .month-events .sc-collection-item .title, .windows.chrome .month-events .sc-collection-item .time, .windows.chrome .month-events .sc-collection-item .end-time {
+    padding-top: 4px;
+}
+
+.atv4.calendar.month-events div.timed div .time, .atv4.calendar.month-events div.timed div .end-time {
+    font-size: 13px;
+}
+
+.atv4.calendar.month-events .sc-collection-item .title {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.windows .atv4.calendar.month-events .sc-collection-item .title {
+    font-weight: 300;
+}
+
+.month.num-rows5 .row4 {
+    top: 60%;
 }

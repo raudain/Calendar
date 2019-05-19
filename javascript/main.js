@@ -1,24 +1,10 @@
 var todaysDate = new Date();
-var thisMonth = todaysDate.getMonth();
 var startingDay;
-
-function setMonth(date) {
-  var getMonth = document.getElementById("sc2117");
-  var monthText = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  getMonth.innerHTML = "<strong>" + monthText[thisMonth] + "</strong> 2019";
-}
-setMonth(todaysDate);
-
-function getHeaderWidth() {
-  var monthWidth = ["236.802px", "246.646px", "219.323px", "203.188px", "197.865px", "205.063px", "197.677px", "227.427px", "267.438px", "238.604px", "259.833px", "260.198px"];
-
-  return monthWidth[3]
-}
-var headerCollection = document.getElementsByClassName("display-header");
-headerCollection[0].style.width = getHeaderWidth();
+var currentMonthIndex = todaysDate.getMonth();
+var monthIndex = currentMonthIndex;
 
 function getStartingDay() {
-  var firstOfTheMonth = new Date(2018, thisMonth, 1);
+  var firstOfTheMonth = new Date(2018, currentMonthIndex, 1);
   var dayOfTheWeek = firstOfTheMonth.getDay();
   var day;
   switch (dayOfTheWeek) {
@@ -85,13 +71,13 @@ function setCalendar() {
   var gridCellClass;
   var cell;
   var offMonth = true;
-  var maximumDay = getlastDayOfTheMonth(thisMonth - 1);
+  var maximumDay = getlastDayOfTheMonth(currentMonthIndex - 1);
   while (i < gridCellCollection.length) {
     cell = gridCellCollection[i];
     gridCellClass = cell.className
     if (dayCounter == 1) {
       offMonth = false;
-      maximumDay = getlastDayOfTheMonth(thisMonth);
+      maximumDay = getlastDayOfTheMonth(currentMonthIndex);
     }
     // Set class for today's date
     if (dayCounter == todaysDate.getDate()) {
@@ -121,48 +107,3 @@ function setCalendar() {
   dayCounter = startingDay;
 }
 setCalendar();
-
-function goToPreviousMonth() {
-  month = month - 1;
-  if (month < 0) {
-    month = 11;
-  }
-  getMonth.innerHTML = "<strong>" + monthText[month] + "</strong> 2019";
-}
-
-function goToNextMonth() {
-  month = month + 1;
-  if (month > 11) {
-    month = 0;
-  }
-  getMonth.innerHTML = "<strong>" + monthText[month] + "</strong> 2019";
-}
-
-var getEventTitle = document.getElementsByTagName("input");
-getEventTitle[0].defaultValue = "New Event";
-
-function toggleCheckMark(element) {
-  var classes = element.className;
-  var unChecked = "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size";
-  var checked = "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size sel";
-  if (classes === unChecked) {
-    element.className = checked;
-  } else {
-    element.className = unChecked;
-  }
-}
-
-var getCheckBox = document.getElementsByTagName("span");
-var parent = getCheckBox[0].parentElement;
-getCheckBox[0].addEventListener("click", function() {
-  toggleCheckMark(parent);
-});
-
-function cancelEvent() {
-  var eventForm = document.getElementById("sc3841");
-  eventForm.parentNode.removeChild(eventForm);
-}
-
-document.getElementById("sc4852-label").addEventListener("click", cancelEvent);
-
-cancelEvent();

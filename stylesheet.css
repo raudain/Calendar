@@ -1253,3 +1253,7 @@ w .event-canvas .event-dot, .event-dot {
 .month.num-rows5 .row4 {
     top: 60%;
 }
+
+.month-events div.timed.single-day div.bg {
+    display: none;
+}

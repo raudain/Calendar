@@ -3,16 +3,23 @@ var navigationControlDate = document.getElementById("sc2117");
 document.getElementById("sc2119").addEventListener("click", backOneMonth);
 document.getElementById("sc2122").addEventListener("click", forwardOneMonth);
 
+function Month(index) {
+  this.index = index;
+  var monthTextArray = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return monthTextArray[monthIndex];
+}
+var month = new Month(monthIndex);
+
 function setMonth(monthIndex) {
-  var getMonthText = function(monthIndex) {
-    var monthTextCollection = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return monthTextCollection[monthIndex];
+  function getMonthText(monthIndex) {
+    var monthTextArray = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return monthTextArray[monthIndex];
   };
   var monthText = getMonthText(monthIndex);
   //monthText = getMonthText(monthIndex);
   navigationControlDate.innerHTML = "<strong>" + monthText + "</strong> 2019";
 }
-setMonth(monthIndex);
+setMonth(month.index);
 
 function getHeaderWidth() {
   var monthWidth = ["236.802px", "246.646px", "219.323px", "203.188px", "197.865px", "205.063px", "197.677px", "227.427px", "267.438px", "238.604px", "259.833px", "260.198px"];

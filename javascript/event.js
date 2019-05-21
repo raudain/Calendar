@@ -1,8 +1,21 @@
 var getEventTitle = document.getElementsByTagName("input");
-getEventTitle[0].defaultValue = "New Event";
-var eventForm = document.getElementById("sc3841");
 
-document.getElementById("sc2298").addEventListener("click", newEvent);
+getEventTitle[0].defaultValue = "New Event";
+
+var eventFormCollection = document.getElementsByClassName("event-inspector-panel");
+//var eventForm = document.getElementById("sc3841");
+var monthEvents = document.getElementById("sc2750");
+var eventDay = document.getElementById("sc2750-1");
+
+var eventForm = eventFormCollection[0];
+var eventContainer = eventDay.firstChild;
+
+document.getElementById("sc2298").addEventListener("click", openEventForm);
+
+function addClass(newClass) {
+  oldClassName = this.className;
+  this.className = oldClassName + "" + newClass;
+}
 
 function toggleCheckMark(element) {
   var classes = element.className;
@@ -29,6 +42,21 @@ document.getElementById("sc4852-label").addEventListener("click", cancelEvent);
 
 cancelEvent();
 
-function newEvent() {
+function openEventForm() {
   document.body.appendChild(eventForm);
 }
+
+monthEvents.addEventListener("click", deselectEvents, true);
+function deselectEvents() {
+  var eventDayClass = eventDay.className;
+  var eventDayClass = eventDayClass.slice(0,98);
+  eventDay.setAttribute("class", eventDayClass);
+}
+
+eventContainer.addEventListener("click", selectEvent);
+function selectEvent() {
+  var eventDayClass = eventDay.className;
+  eventDay.setAttribute("class", eventDayClass + " sel");
+}
+
+eventContainer.addEventListener("dblclick", openEventForm);

@@ -3,7 +3,6 @@ var getEventTitle = document.getElementsByTagName("input");
 getEventTitle[0].defaultValue = "New Event";
 
 var eventFormCollection = document.getElementsByClassName("event-inspector-panel");
-//var eventForm = document.getElementById("sc3841");
 var monthEvents = document.getElementById("sc2750");
 var eventDay = document.getElementById("sc2750-1");
 
@@ -12,27 +11,26 @@ var eventContainer = eventDay.firstChild;
 
 document.getElementById("sc2298").addEventListener("click", openEventForm);
 
-function addClass(newClass) {
-  oldClassName = this.className;
-  this.className = oldClassName + "" + newClass;
+var checkBox = {
+  button: document.querySelector("span.button"),
+  control: function() {
+    return this.button.parentElement;
+  },
+  notCheckedClass: "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size",
+  checkedClass: "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size sel"
 }
 
-function toggleCheckMark(element) {
-  var classes = element.className;
-  var unChecked = "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size";
-  var checked = "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size sel";
-  if (classes === unChecked) {
-    element.className = checked;
+function toggleCheckMark() {
+  var checkBoxControl = checkBox.control();
+  var classes = checkBoxControl.className;
+  if (classes == checkBox.notCheckedClass) {
+    checkBoxControl.className = checkBox.checkedClass;
   } else {
-    element.className = unChecked;
+    checkBoxControl.className = checkBox.notCheckedClass;
   }
 }
 
-var getCheckBox = document.getElementsByTagName("span");
-var parent = getCheckBox[0].parentElement;
-getCheckBox[0].addEventListener("click", function() {
-  toggleCheckMark(parent);
-});
+checkBox.button.addEventListener("click", toggleCheckMark);
 
 function cancelEvent() {
   eventForm.parentNode.removeChild(eventForm);

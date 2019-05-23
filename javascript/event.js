@@ -1,15 +1,4 @@
-var getEventTitle = document.getElementsByTagName("input");
-
-getEventTitle[0].defaultValue = "New Event";
-
-var eventFormCollection = document.getElementsByClassName("event-inspector-panel");
-var monthEvents = document.getElementById("sc2750");
-var eventDay = document.getElementById("sc2750-1");
-
-var eventForm = eventFormCollection[0];
-var eventContainer = eventDay.firstChild;
-
-document.getElementById("sc2298").addEventListener("click", openEventForm);
+var eventInspectorPanel = document.getElementsByClassName("event-inspector-panel")[0];
 
 var checkBox = {
   button: document.querySelector("span.button"),
@@ -19,6 +8,27 @@ var checkBox = {
   notCheckedClass: "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size",
   checkedClass: "atv4 calendar sc-view sc-button-view sc-checkbox-view sc-checkbox-control checkbox sc-regular-size sel"
 }
+
+var getEventTitle = document.getElementsByTagName("input");
+var monthEvents = document.getElementById("sc2750");
+var eventDay = document.getElementById("sc2750-1");
+var eventContainer = eventDay.firstChild;
+
+function setEventInspectorPanelClass() {
+  var classes = eventInspectorPanel.className;
+  eventInspectorPanel.className = classes + " perfectLeft";
+}
+setEventInspectorPanelClass();
+
+function setEventInspectorPanelStyle() {
+  eventInspectorPanel.style.left = "1000px";
+  eventInspectorPanel.style.top = "300px";
+}
+setEventInspectorPanelStyle();
+
+getEventTitle[0].defaultValue = "New Event";
+
+document.getElementById("sc2298").addEventListener("click", openEventForm);
 
 function toggleCheckMark() {
   var checkBoxControl = checkBox.control();
@@ -33,7 +43,7 @@ function toggleCheckMark() {
 checkBox.button.addEventListener("click", toggleCheckMark);
 
 function cancelEvent() {
-  eventForm.parentNode.removeChild(eventForm);
+  eventInspectorPanel.parentNode.removeChild(eventInspectorPanel);
 }
 
 document.getElementById("sc4852-label").addEventListener("click", cancelEvent);
@@ -41,7 +51,7 @@ document.getElementById("sc4852-label").addEventListener("click", cancelEvent);
 cancelEvent();
 
 function openEventForm() {
-  document.body.appendChild(eventForm);
+  document.body.appendChild(eventInspectorPanel);
 }
 
 monthEvents.addEventListener("click", deselectEvents, true);

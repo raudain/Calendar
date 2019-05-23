@@ -1,7 +1,6 @@
 var todaysDate = new Date();
 var startingDay;
 var currentMonthIndex = todaysDate.getMonth();
-var monthIndex = currentMonthIndex;
 
 function getStartingDay() {
   var firstOfTheMonth = new Date(2018, currentMonthIndex, 1);
@@ -64,19 +63,19 @@ function setCalendar() {
   var monthBodyCollection = document.getElementsByClassName("month-body");
   var gridCellCollection = monthBodyCollection[0].getElementsByClassName("col");
   var dayCollection = document.getElementsByClassName("dt");
-
   var i = 0;
-
   var dayCounter = startingDay;
   var gridCellClass;
   var cell;
-  var offMonth = true;
-  var maximumDay = getlastDayOfTheMonth(currentMonthIndex - 1);
+  var lastMonth = currentMonthIndex - 1;
+  var month = lastMonth;
+  var maximumDay = getlastDayOfTheMonth(lastMonth);
   while (i < gridCellCollection.length) {
     cell = gridCellCollection[i];
     gridCellClass = cell.className
+    // set off month condition
     if (dayCounter == 1) {
-      offMonth = false;
+      month = month + 1;
       maximumDay = getlastDayOfTheMonth(currentMonthIndex);
     }
     // Set class for today's date
@@ -89,13 +88,10 @@ function setCalendar() {
       thisWeek.appendChild(weekLine);
     }
     // Set off month class
-    if (offMonth) {
+    if (month != currentMonthIndex) {
       cell.setAttribute("class", gridCellClass + " off-month");
     }
     // increment day counter
-    if (true) {
-
-    }
     dayCollection[i].innerHTML = dayCounter;
     if (dayCounter < maximumDay) {
       dayCounter = dayCounter + 1;

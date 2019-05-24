@@ -1,4 +1,10 @@
 var eventInspectorPanel = document.getElementsByClassName("event-inspector-panel")[0];
+var eventDay = document.getElementById("sc2750-1");
+
+var evint = {
+  class: eventDay.className,
+  columnNumber: eventDay.className.charAt(eventDay.className.length - 1)
+}
 
 var checkBox = {
   button: document.querySelector("span.button"),
@@ -11,7 +17,6 @@ var checkBox = {
 
 var getEventTitle = document.getElementsByTagName("input");
 var monthEvents = document.getElementById("sc2750");
-var eventDay = document.getElementById("sc2750-1");
 var eventContainer = eventDay.firstChild;
 
 function setEventInspectorPanelClass() {
@@ -21,7 +26,8 @@ function setEventInspectorPanelClass() {
 setEventInspectorPanelClass();
 
 function setEventInspectorPanelStyle() {
-  eventInspectorPanel.style.left = "1000px";
+
+  eventInspectorPanel.style.left = "100px";
   eventInspectorPanel.style.top = "300px";
 }
 setEventInspectorPanelStyle();

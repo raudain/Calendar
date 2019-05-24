@@ -3,12 +3,10 @@ var navigationControlDate = document.getElementById("sc2117");
 document.getElementById("sc2119").addEventListener("click", backOneMonth);
 document.getElementById("sc2122").addEventListener("click", forwardOneMonth);
 
-function Month(index) {
-  this.index = index;
-  var monthTextArray = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  return monthTextArray[monthIndex];
+var month = {
+  index: currentMonthIndex,
+  monthTextArray: ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 }
-var month = new Month(monthIndex);
 
 function setMonth(monthIndex) {
   function getMonthText(monthIndex) {
@@ -16,7 +14,6 @@ function setMonth(monthIndex) {
     return monthTextArray[monthIndex];
   };
   var monthText = getMonthText(monthIndex);
-  //monthText = getMonthText(monthIndex);
   navigationControlDate.innerHTML = "<strong>" + monthText + "</strong> 2019";
 }
 setMonth(month.index);
@@ -32,20 +29,6 @@ headerCollection[0].style.width = getHeaderWidth();
 var thisMonth = todaysDate.getMonth();
 monthTextCollection = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var monthIndex = 4;
-
-var month = {
-  monthText: "May",
-  getCurrentMonth : function() {
-    var monthTextCollection = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return this.monthText;
-  },
-  get lang() {
-    return this.monthText;
-  },
-  set lang(value) {
-    this.monthText = value;
-  }
-};
 
 function backOneMonth() {
   monthIndex = monthIndex - 1;

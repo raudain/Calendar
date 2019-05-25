@@ -14,7 +14,7 @@ function setEventInspectorPanelClass() {
 setEventInspectorPanelClass();
 
 function setEventPanelStyle() {
-  var left = window.innerWidth * .85714285714285716 - parseInt(evint.panel.style.width);
+  var left = window.innerWidth * .85714285714285716 - parseInt(evint.panel.style.width) - 5;
   evint.panel.style.left = left + "px";
   evint.panel.style.top = "300px";
 }
@@ -28,7 +28,11 @@ function setEventPointerClass() {
 }
 setEventPointerClass();
 
-document.getElementsByTagName("input")[0].defaultValue = "New Event";
+function setEventTitle() {
+  var title;
+  document.getElementsByTagName("input")[0].defaultValue = "New Event";
+}
+setEventTitle();
 
 document.getElementById("sc2298").addEventListener("click", openEventForm);
 

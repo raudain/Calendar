@@ -412,7 +412,7 @@ div.col.today .cell-container {
     color: #ff3b30;
 }
 
-.webkit .sc-regular-size.borderless.button .sc-button-label {
+.windows.webkit .atv4.sc-regular-size.borderless.button .sc-button-label {
     line-height: 25px;
 }
 
@@ -470,6 +470,10 @@ div.col.today .cell-container {
     padding-bottom: 5px;
     border-radius: 5px;
     content: '';
+}
+
+.atv4.calendar.button.borderless.delete-button .sc-button-label, .sidebar-footer .atv4.calendar.button.borderless .sc-button-label, .main-footer .atv4.calendar.button.borderless .sc-button-label {
+    color: #ff3b30;
 }
 
 .atv4.sc-pane.sc-panel:before {
@@ -1267,4 +1271,8 @@ w .event-canvas .event-dot, .event-dot {
     transform: rotate(270deg);
     top: 32px;
     right: -24px;
+}
+
+.sc-view.text-align-left, .sc-view.textAlignLeft {
+    text-align: left;
 }

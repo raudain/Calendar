@@ -1,6 +1,7 @@
 var evint = {
   panel: document.querySelector("div.event-inspector-panel"),
-  pointer: document.querySelector("div.sc-pointer")
+  pointer: document.querySelector("div.sc-pointer"),
+  title: document.querySelector("input.field")
 };
 var eventDay = document.getElementById("sc2750-1");
 var eventContainer = eventDay.firstChild;
@@ -16,7 +17,7 @@ setEventInspectorPanelClass();
 function setEventPanelStyle() {
   var left = window.innerWidth * .85714285714285716 - parseInt(evint.panel.style.width) - 5;
   evint.panel.style.left = left + "px";
-  evint.panel.style.top = "300px";
+  evint.panel.style.top = "305px";
 }
 setEventPanelStyle();
 
@@ -29,8 +30,8 @@ function setEventPointerClass() {
 setEventPointerClass();
 
 function setEventTitle() {
-  var title;
-  document.getElementsByTagName("input")[0].defaultValue = "New Event";
+  var title = document.querySelector("div.title").innerText;
+  evint.title.defaultValue = title;
 }
 setEventTitle();
 

@@ -1,7 +1,10 @@
 var evint = {
   panel: document.querySelector("div.event-inspector-panel"),
-  pointer: document.querySelector("div.sc-pointer"),
-  title: document.querySelector("input.field")
+  pointer: document.querySelector("div.sc-pointer")
+};
+var eventPanel = {
+  title: document.querySelector("input.field"),
+  buttonLabels: evint.panel.querySelectorAll("label.sc-button-label")
 };
 var eventDay = document.getElementById("sc2750-1");
 var eventContainer = eventDay.firstChild;
@@ -15,11 +18,12 @@ function setEventInspectorPanelClass() {
 setEventInspectorPanelClass();
 
 function setEventPanelStyle() {
-  var left = window.innerWidth * .85714285714285716 - parseInt(evint.panel.style.width) - 5;
+  var left = window.innerWidth * .85714285714285716 - parseInt(evint.panel.style.width) - 3;
   evint.panel.style.left = left + "px";
   evint.panel.style.top = "305px";
 }
 setEventPanelStyle();
+window.addEventListener("resize", setEventPanelStyle);
 
 // ****************************** End event panel *********************
 
@@ -31,7 +35,7 @@ setEventPointerClass();
 
 function setEventTitle() {
   var title = document.querySelector("div.title").innerText;
-  evint.title.defaultValue = title;
+  eventPanel.title.defaultValue = title;
 }
 setEventTitle();
 
@@ -60,7 +64,20 @@ function cancelEvent() {
   evint.panel.parentNode.removeChild(evint.panel);
 }
 
-document.getElementById("sc4852-label").addEventListener("click", cancelEvent);
+function addCancelListener() {
+  var button;
+  var buttonLabel = "";
+  var i = 0;
+  while (i < eventPanel.buttonLabels.length) {
+    button = eventPanel.buttonLabels[i];
+    buttonLabel = button.innerText;
+    if (buttonLabel == "Delete" || buttonLabel == "Cancel" || buttonLabel == "OK") {
+      button.addEventListener("click", cancelEvent);
+    }
+    i++;
+  }
+}
+addCancelListener();
 
 cancelEvent();
 

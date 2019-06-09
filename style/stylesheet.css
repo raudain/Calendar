@@ -432,13 +432,13 @@ div.col.today .cell-container {
 }
 
 .button .add-event-icon {
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: -78px -503px;
     background-repeat: no-repeat;
 }
 
 .button .add-event-icon:hover {
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: -26px -529px;
     background-repeat: no-repeat;
 }
@@ -518,7 +518,7 @@ div.col.today .cell-container {
 }
 
 .atv4.sc-pane.sc-picker .sc-pointer {
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: -134px -690px;
     background-repeat: no-repeat;
     position: absolute;
@@ -893,7 +893,7 @@ body textarea, body input {
 
 .sc-checkbox-view.sel .button {
     background-size: 168px 911px;
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: -144px -610px;
     background-repeat: no-repeat;
 }
@@ -903,7 +903,7 @@ body textarea, body input {
     height: 16px;
     position: absolute;
     top: 0px;
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: 0px -626px;
     background-repeat: no-repeat;
 }
@@ -968,7 +968,7 @@ body textarea, body input {
     right: 6px;
     width: 16px;
     height: 16px;
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: -48px -690px;
     background-repeat: no-repeat;
 }
@@ -1049,7 +1049,7 @@ body textarea, body input {
     width: 59px;
     height: 17px;
     top: 19px;
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: 0px -576px;
     background-repeat: no-repeat;
 }
@@ -1067,14 +1067,14 @@ body textarea, body input {
 
 .atv4.calendar.navigation-control .previous-arrow .arrow-image {
     left: 19px;
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: -156px -503px;
     background-repeat: no-repeat;
 }
 
 .atv4.calendar.navigation-control .next-arrow .arrow-image {
     left: 7px;
-    background-image: url(images/background.png);
+    background-image: url(/C:/Users/Roody/Documents/GitHub/Calendar/images/background.png);
     background-position: -114px -690px;
     background-repeat: no-repeat;
 }
@@ -1275,4 +1275,8 @@ w .event-canvas .event-dot, .event-dot {
 
 .sc-view.text-align-left, .sc-view.textAlignLeft {
     text-align: left;
+}
+
+.month.num-rows6 .row6 {
+    top: 83.33333%;
 }

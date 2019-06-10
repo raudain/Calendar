@@ -38,13 +38,13 @@ function getlastDayOfTheMonth(month) {
   var max;
   switch (month) {
     case 0:
-      max = "Sunday";
+      max = 31;
       break;
     case 1:
-      max = "Monday";
+      max = 28;
       break;
     case 2:
-      max = 28;
+      max = 31;
       break;
     case 3:
       max = 30;
@@ -53,16 +53,29 @@ function getlastDayOfTheMonth(month) {
       max = 31;
       break;
     case 5:
-      max = 31;
+      max = 30;
       break;
     case  6:
-      max = "Saturday";
+      max = 31;
+    case  7:
+      max = 31;
+    case  8:
+        max = 30;
+    case  9:
+        max = 31;
+    case  10:
+        max = 30;
+    case  11:
+        max = 31;
   }
   return max;
 }
 
 function setCalendar() {
   var monthBody = document.querySelector("div.month-body");
+  var grid = monthBody.parentElement;
+  grid.className = grid.className + " num-rows6";
+
   var gridCellCollection = monthBody.getElementsByClassName("col");
   var i = 0;
   var dayCounter = getStartingDay();

@@ -208,31 +208,18 @@ strong {
   bottom: 0;
 }
 
-.row {
-  height: 20%;
+.month .row {
   left: 0;
   right: 0;
 }
 
-.row1 {
+.month .row1 {
   top: 0;
-}
-
-.row3 {
-  top: 40%;
 }
 
 .atv4 .large-display-text {
   /*font-family: 'SFNSDisplay', 'SFNSText', 'Helvetica Neue', sans-serif;*/
   font-family: 'Helvetica';
-}
-
-.row4 {
-  top: 60%;
-}
-
-.row5 {
-  top: 80%;
 }
 
 .month-canvas.month .month-body .row .this-week-line {
@@ -1275,6 +1262,30 @@ w .event-canvas .event-dot, .event-dot {
 
 .sc-view.text-align-left, .sc-view.textAlignLeft {
     text-align: left;
+}
+
+.month.num-rows6 .row6 {
+    top: 83.33333%;
+}
+
+.month.num-rows6 .row1, .month.num-rows6 .row2, .month.num-rows6 .row3, .month.num-rows6 .row4, .month.num-rows6 .row5, .month.num-rows6 .row6, .month.num-rows6 .row7 {
+    height: 20%;
+}
+
+.month.num-rows6 .row2 {
+    top: 16.66667%;
+}
+
+.month.num-rows6 .row3 {
+    top: 33.33333%;
+}
+
+.month.num-rows6 .row4 {
+    top: 50%;
+}
+
+.month.num-rows6 .row5 {
+    top: 66.66667%;
 }
 
 .month.num-rows6 .row6 {

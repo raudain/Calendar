@@ -537,11 +537,6 @@ div.col.today .cell-container {
     z-index: 1;
 }
 
-
-.month div {
-    position: absolute;
-}
-
 .sc-panel.pop-over .picker-contentView {
     overflow: visible;
 }
@@ -1069,10 +1064,6 @@ body textarea, body input {
 .month-canvas.month .month-body {
     min-height: 300px;
     top: 27px;
-}
-
-.month-canvas.month .month-body, .overflow .number {
-    -webkit-text-stroke: 1px rgba(255,255,255,0.01);
 }
 
 .month .col {

@@ -1,0 +1,7 @@
+.month div {
+    position: absolute;
+}
+
+.month-canvas.month .month-body, .overflow .number {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.01);
+}

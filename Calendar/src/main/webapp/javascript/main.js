@@ -5,6 +5,10 @@ var currentIndex = {
   day: todaysDate.getDate()
 }
 
+function getFirstSundayDay() {
+	
+}
+
 function getStartingDay() {
   var firstOfTheMonth = new Date(currentIndex.year, currentIndex.month, 1);
   var dayOfTheWeek = firstOfTheMonth.getDay();
@@ -17,6 +21,7 @@ function getStartingDay() {
       day = "Monday";
       break;
     case 2:
+    	
       day = 28;
       break;
     case 3:

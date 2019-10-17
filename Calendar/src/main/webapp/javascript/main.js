@@ -1,5 +1,5 @@
 var todaysDate = new Date();
-var currentIndex = {
+var currentDateIndex = {
 	year : todaysDate.getFullYear(),
 	month : todaysDate.getMonth(),
 	day : todaysDate.getDate()
@@ -61,9 +61,9 @@ function getlastDayOfTheMonth(month) {
 }
 
 function getFirstSundayDay() {
-	var previousMonth = currentIndex.month - 1;
+	var previousMonth = currentDateIndex.month - 1;
 	var dayBeforeFirstOfTheMonth = getlastDayOfTheMonth(previousMonth);
-	var dateBeforeFirstOfTheMonth = new Date(currentIndex.year, previousMonth, dayBeforeFirstOfTheMonth);
+	var dateBeforeFirstOfTheMonth = new Date(currentDateIndex.year, previousMonth, dayBeforeFirstOfTheMonth);
 	var dayOfTheWeek = dateBeforeFirstOfTheMonth.getDay();
 	var day;
 	switch (dayOfTheWeek) {
@@ -103,7 +103,7 @@ function setCalendar() {
 	var dayCounter = getFirstSundayDay();
 	var gridCellClass;
 	var cell;
-	var month = currentIndex.month - 1;
+	var month = currentDateIndex.month - 1;
 	while (i < gridCellCollection.length) {
 		cell = gridCellCollection[i];
 		gridCellClass = cell.className
@@ -112,7 +112,7 @@ function setCalendar() {
 			month = month + 1;
 		}
 		// Set class for today's date
-		if (dayCounter == currentIndex.day) {
+		if (dayCounter == currentDateIndex.day) {
 			cell.setAttribute("class", gridCellClass + " today");
 
 			var thisWeek = cell.parentElement;
@@ -121,7 +121,7 @@ function setCalendar() {
 			thisWeek.appendChild(weekLine);
 		}
 		// Set off month class
-		if (month != currentIndex.month) {
+		if (month != currentDateIndex.month) {
 			cell.setAttribute("class", gridCellClass + " off-month");
 		}
 		// increment day counter

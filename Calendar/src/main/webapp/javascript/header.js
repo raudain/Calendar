@@ -4,7 +4,7 @@ document.getElementById("sc2119").addEventListener("click", backOneMonth);
 document.getElementById("sc2122").addEventListener("click", forwardOneMonth);
 
 var month = {
-  index: currentIndex.month,
+  index: currentDateIndex.month,
   monthTextArray: ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 }
 
